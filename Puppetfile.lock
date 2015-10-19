@@ -89,6 +89,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: mloberg/puppet-python
+  specs:
+    python (3.0.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.4.1)
@@ -120,6 +125,7 @@ DEPENDENCIES
   openssl (= 1.0.0)
   phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
+  python (= 3.0.1)
   repository (= 2.4.1)
   ruby (= 8.5.2)
   stdlib (= 4.7.0)

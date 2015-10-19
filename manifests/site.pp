@@ -74,6 +74,10 @@ node default {
   ruby::version { '2.2.3': }
   class { 'ruby::global': version => '2.1.7' }
 
+  # python versions
+  python::version { '2.7.10': }
+  python::version { '3.4.3': }
+  
   # common, useful packages
   package {
     [
