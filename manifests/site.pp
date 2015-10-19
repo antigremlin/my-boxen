@@ -87,6 +87,14 @@ node default {
     ]:
   }
 
+  # cask installs
+  include brewcask
+  package { 'java': provider => 'brewcask' }
+  package { 'ant':
+    install_options => [ '--with-ivy' ]
+  }
+  package { 'maven': }
+
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
