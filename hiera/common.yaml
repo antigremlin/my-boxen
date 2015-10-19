@@ -1,0 +1,9 @@
+# My common hiera file
+
+ruby::build::ensure: "v20150928"
+ruby::global::version: "2.1.7"
+
+nodejs::global::version: "0.12.7"
+nodejs::version::alias:
+  "0.10": "0.10.40"
+  "0.12": "0.12.7"
