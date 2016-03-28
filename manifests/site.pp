@@ -89,11 +89,43 @@ node default {
 
   # cask installs
   include brewcask
+  homebrew::tap { 'caskroom/versions': }
+
+  package { 'appcleaner': provider => 'brewcask' }
+  package { 'daisydisk': provider => 'brewcask' }
+  package { 'skype': provider => 'brewcask' }
+  package { 'mou': provider => 'brewcask' }
+  package { 'taskpaper': provider => 'brewcask' }
+
+  package { 'adobe-digital-editions': provider => 'brewcask' }
+  package { 'spotify': provider => 'brewcask' }
+
+  package { 'google-chrome': provider => 'brewcask' }
+  package { 'firefox': provider => 'brewcask' }
+
+  package { 'emacs': provider => 'brewcask' }
+  package { 'sublime-text': provider => 'brewcask' }
+  package { 'github-desktop': provider => 'brewcask' }
+  package { 'sourcetree': provider => 'brewcask' }
+  package { 'versions': provider => 'brewcask' }
+
   package { 'java': provider => 'brewcask' }
   package { 'ant':
     install_options => [ '--with-ivy' ]
   }
   package { 'maven': }
+  package { 'gradle': }
+  package { 'intellij-idea': provider => 'brewcask' }
+  package { 'sts': provider => 'brewcask' }
+  package { 'eclipse-java': provider => 'brewcask' }
+
+  package { 'virtualbox': provider => 'brewcask' }
+  package { 'virtualbox-extension-pack': provider => 'brewcask' }
+  package { 'vagrant': provider => 'brewcask' }
+  package { 'awscli': }
+  package { 'docker': }
+  package { 'docker-machine': }
+  package { 'docker-compose': }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
